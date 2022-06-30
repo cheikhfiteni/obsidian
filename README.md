@@ -6,7 +6,7 @@ MatchboxDAO Hackathon Details: [link](https://www.matchboxdao.com/)
 Discord link: [link]()
 
 
-Abstract: Create a "pourous" privacy focused gaming primitive centered on the ability to randomly listen in or capture "bits" from an opponents in-chain chat. 
+Abstract: Create a privacy focused gaming primitive centered on the ability to randomly listen in or capture "bits" from an opponents in-chain chat. 
 
 Establishing a standard for in-game communication would lay the foundation for a next generation of espionage-themed games (with counter survelliance elements), add a new dimension to existing coordination-based boardgames like Diplomacy/Mafia, and/or define the core functionality for a class of characters in RPG card games and/or MMOs which have a "mind read ability."
 
