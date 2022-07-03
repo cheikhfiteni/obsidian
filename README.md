@@ -3,7 +3,7 @@
 
 MatchboxDAO Hackathon Details: [link](https://www.matchboxdao.com/) 
 <br>
-Discord link: [link]()
+Discord link: [link](https://discord.gg/tAjuxPeQ) 
 
 
 Abstract: Create a privacy focused gaming primitive centered on the ability to randomly listen in or capture "bits" from an opponents in-chain chat. 
@@ -21,6 +21,22 @@ The game would be designed by encrypting every 5 words with 5 private keys, and 
 The longterm vision for [_obsidian_](https://github.com/cheikhfiteni/obsidian) will be to create a minimum viable standard that any non-web3 dev can compose on. This project also introduces new game theoretic play where the longer gameplay goes on for (in theory), opponent players will become more covered in how they internally communicate, since the possibility that someone has partial access to chat text goes up. This can be balanced by a higher (or quadratic) cost to unlocking the last 'pareto' distributed scope over opponent's speech, so as to make it a point tradeoff to spec into these components completely.
 
 Although a lot of hashing primitives written in Cairo and on Starkware are still under development, I believe there's enough open source material to build a proof of concept. If all else fails, we can use these efforts as an oppurtunity to define implementations for the standards that would make this core feature for many games possible, and widen what is possible in the Cairo ecosystem in the future.
+
+#### Resources (ADD as you find relevant material on; numbered are topic areas where more shared knowledge is needed)
+
+1. Frontend library for interacting with Cairo contracts or wallet extensions from a React hooks interface. Think ethers.js or wagmi lib equivalent
+    - TODO fill out and find. HIGH PRIORITY
+2. More resources on understanding how Rate Limiter Nullifiers work, and lean implementations in solidity we can adapt for word by word en/decryption.
+    - [Vitalik post mentioning concept](https://vitalik.ca/general/2022/06/15/using_snarks.html)
+    - [High level Medium post by team](https://medium.com/privacy-scaling-explorations/rate-limiting-nullifier-a-spam-protection-mechanism-for-anonymous-environments-bbe4006a57d)
+    - [Spec implementation in a p2p protocol](https://rfc.vac.dev/spec/32/)
+    - [Semaphore solidity implementation](https://ethresear.ch/t/semaphore-rln-rate-limiting-nullifier-for-spam-prevention-in-anonymous-p2p-setting/5009) with [Github repo](https://github.com/semaphore-protocol/semaphore)
+    - TODO cut all these down and read myself (@cheikhfiteni) to know what is good.
+3. Cairo specific contract primitives that make sense in context of current [schematic](TODO have this link to a file/image in repo with transferred architecture schematic)
+    - Use a modified [Account](https://github.com/OpenZeppelin/cairo-contracts/blob/main/docs/Account.md) contract to post and read from state. SDK will call from here
+    - Need there to be a round registry contract. Will these use storage vars?
+    - 
+4. What are cheap, easy Github Actions we can add to enforce style/do testing checks to make CI/CD dev easiest in this week? Lowest priority, but if there is a way to be faster shipping and you can make a case, drop it.
 
 #### **Asymetric Information Games to Playtest/Extend**
 
