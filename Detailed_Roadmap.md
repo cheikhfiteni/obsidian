@@ -1,17 +1,17 @@
 ## Roadmap Page
 
-[Insert here information on schematics and architecture structure here. Above the subsection put the [Lucid App](https://lucid.app/users/login#/login) designed diagram ]
-
 ### **Rough Architecture Notes**
 
-ilors ipsum et cetera et cetera
+Frontend/Client/Contract schematics can be summarized here:
 
-[End with a chart of schedule here]
+![Flowcharts](https://user-images.githubusercontent.com/20891428/177453892-b7c42ba4-6972-414c-9327-5e7348399ac5.jpeg)
+
+
 
 #### Resources (ADD as you find relevant material on; numbered are topic areas where more shared knowledge is needed)
 
 1. Frontend library for interacting with Cairo contracts or wallet extensions from a React hooks interface. Think ethers.js or wagmi lib equivalent
-    - TODO fill out and find. HIGH PRIORITY
+    - [Starknet React Hooks](https://github.com/apibara/starknet-react) Starknet equivalent of Wagmi custom hooks
 2. More resources on understanding how Rate Limiter Nullifiers work, and lean implementations in solidity we can adapt for word by word en/decryption.
     - [Vitalik post mentioning concept](https://vitalik.ca/general/2022/06/15/using_snarks.html)
     - [High level Medium post by team](https://medium.com/privacy-scaling-explorations/rate-limiting-nullifier-a-spam-protection-mechanism-for-anonymous-environments-bbe4006a57d)
@@ -23,3 +23,7 @@ ilors ipsum et cetera et cetera
     - Need there to be a round registry contract. Will these use storage vars?
     - 
 4. What are cheap, easy Github Actions we can add to enforce style/do testing checks to make CI/CD dev easiest in this week? Lowest priority, but if there is a way to be faster shipping and you can make a case, drop it.
+
+Less important but useful for understanding how project works:
+- [Diffie-Helman Key exchange explained](https://www.youtube.com/watch?v=YEBfamv-_do)
+- [Town of Salem Classic Playthrough](https://www.youtube.com/watch?v=Zjg5jCWoKN0)
