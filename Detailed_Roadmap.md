@@ -27,3 +27,4 @@ Frontend/Client/Contract schematics can be summarized here:
 Less important but useful for understanding how project works:
 - [Diffie-Helman Key exchange explained](https://www.youtube.com/watch?v=YEBfamv-_do)
 - [Town of Salem Classic Playthrough](https://www.youtube.com/watch?v=Zjg5jCWoKN0)
+- [Mafia Gameplay Explained](https://en.wikipedia.org/wiki/Mafia_(party_game))
