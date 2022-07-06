@@ -4,7 +4,7 @@
 
 MatchboxDAO Hackathon Details: [link](https://www.matchboxdao.com/)
 <br>
-Discord link: [link]()
+Discord link: [link](https://discord.gg/tAjuxPeQ) 
 
 Abstract: Create a privacy focused gaming primitive centered on the ability to randomly listen in or capture "bits" from an opponents in-chain chat.
 
@@ -22,9 +22,7 @@ The longterm vision for [_obsidian_](https://github.com/cheikhfiteni/obsidian) w
 
 Although a lot of hashing primitives written in Cairo and on Starkware are still under development, I believe there's enough open source material to build a proof of concept. If all else fails, we can use these efforts as an oppurtunity to define implementations for the standards that would make this core feature for many games possible, and widen what is possible in the Cairo ecosystem in the future.
 
-#### **Frameworks**
-
-- [Starknet React Hooks](https://github.com/apibara/starknet-react) Starknet equivalent of Wagmi custom hooks
+[_For those committed to our vision and interested in seeing a more detailed roadmap, see here_](./Detailed_Roadmap.md)
 
 #### **Asymetric Information Games to Playtest/Extend**
 
