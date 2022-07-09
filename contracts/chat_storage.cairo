@@ -43,7 +43,6 @@ func read_message_at_timestamp{
 end
 
 # Recursive helper function for read_message_at_timestamp
-@internal
 func read_message_at_timestamp_helper(
     account_id : felt, 
     timestamp : felt,
