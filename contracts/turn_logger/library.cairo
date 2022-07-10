@@ -1,3 +1,7 @@
+%lang starknet
+
+from starkware.starknet.common.syscalls import get_caller_address, get_block_timestamp
+
 # This should work on validating rounds and saying who died each day
 
 # Assign roles, or don't? Figure out who won?
