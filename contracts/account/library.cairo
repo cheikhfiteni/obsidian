@@ -30,6 +30,10 @@ end
 func Account_public_key() -> (res: felt):
 end
 
+@storage_var 
+func Account_whisper_key() -> (res: felt):
+end 
+
 #
 # Structs
 #
@@ -92,6 +96,15 @@ namespace Account:
         return (res=res)
     end
 
+     func get_whisper_key{
+            syscall_ptr : felt*,
+            pedersen_ptr : HashBuiltin*,
+            range_check_ptr
+        }() -> (res: felt):
+        let (res) = Account_whisper_key.read()
+        return (res=res)
+    end
+
     func get_nonce{
             syscall_ptr : felt*,
             pedersen_ptr : HashBuiltin*,
@@ -114,6 +127,17 @@ namespace Account:
         Account_public_key.write(new_public_key)
         return ()
     end
+
+    func set_whisper_key{
+            syscall_ptr : felt*,
+            pedersen_ptr : HashBuiltin*,
+            range_check_ptr
+        }(new_public_key: felt):
+        assert_only_self()
+        Account_whisper_key.write(new_public_key)
+        return ()
+    end
+
 
     #
     # Business logic
