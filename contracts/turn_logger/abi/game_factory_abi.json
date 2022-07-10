@@ -7,13 +7,13 @@
             }
         ],
         "keys": [],
-        "name": "administered_contract_deployed",
+        "name": "turn_logger_contract_deployed",
         "type": "event"
     },
     {
         "inputs": [
             {
-                "name": "admin_class_hash_",
+                "name": "turn_logger_class_hash_",
                 "type": "felt"
             }
         ],
@@ -24,7 +24,7 @@
     {
         "inputs": [
             {
-                "name": "admin_address",
+                "name": "turn_logger_address",
                 "type": "felt"
             }
         ],
