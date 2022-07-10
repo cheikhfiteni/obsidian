@@ -1,7 +1,9 @@
 %lang starknet
 
 from starkware.starknet.common.syscalls import get_caller_address, get_block_timestamp
+from starkware.cairo.common.cairo_builtins import HashBuiltin
 
+from structs import Player
 # This should work on validating rounds and saying who died each day
 
 # Assign roles, or don't? Figure out who won?
@@ -36,7 +38,7 @@ end
 #
 
 @storage_var
-func character_will_storage(address : felt) -> (will : WillStruct):
+func character_storage(address : felt) -> (character : Player):
 end
 
 ##require a with attr asser that caller sender is the person will holder
@@ -68,6 +70,8 @@ end
 #
 # Setters; set the key 
 #
+@external
+func set_new_player{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}(
 
 
 #

@@ -1,0 +1,35 @@
+[
+    {
+        "data": [
+            {
+                "name": "contract_address",
+                "type": "felt"
+            }
+        ],
+        "keys": [],
+        "name": "administered_contract_deployed",
+        "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "name": "admin_class_hash_",
+                "type": "felt"
+            }
+        ],
+        "name": "constructor",
+        "outputs": [],
+        "type": "constructor"
+    },
+    {
+        "inputs": [
+            {
+                "name": "admin_address",
+                "type": "felt"
+            }
+        ],
+        "name": "deploy_new_game",
+        "outputs": [],
+        "type": "function"
+    }
+]
