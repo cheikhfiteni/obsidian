@@ -1,14 +1,22 @@
 %lang starknet
 
-from starkware.starknet.common.syscalls import get_caller_address, storage_read, storage_write
-#from starkware.cairo.common.alloc import alloc
+from starkware.starknet.common.syscalls import get_caller_address, get_block_timestamp
+#use get_block_timestamp to make sure that a message isn't being published in the future.
+
+#  let (current_timestamp) = get_block_timestamp()
+#             with_attr error_message("ChatStorage: message timestamp is in the future"):
+#                 let (is_future_message) = is_le(current_timestamp, message.timestamp)
+#                 assert is_future_expired = FALSE
+#             end
+
+#Struct for lookup of public keys; struct imports
+from contracts.chat_storage.structs import 
+
+#needed for the building messages helper function.
+from starkware.cairo.common.alloc import alloc
 from starkware.cairo.common.cairo_builtins import HashBuiltin
 
-# Struct to store messages and the time they were published.
-struct Message:
-    member message : felt
-    member timestamp : felt
-end
+
 
 # Storage var to map account to their messages.
 # res := (messages_count : felt, messages : Message*)
