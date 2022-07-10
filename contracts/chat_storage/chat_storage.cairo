@@ -10,6 +10,8 @@ from structs import MessagePacked, Message
 from starkware.cairo.common.alloc import alloc
 from starkware.cairo.common.cairo_builtins import HashBuiltin
 
+# Needed for comparative boolean statements.
+from starkware.cairo.common.math import assert_le, assert_lt
 
 
 #
@@ -17,8 +19,6 @@ from starkware.cairo.common.cairo_builtins import HashBuiltin
 #
 
 
-# Storage var to map account to their messages.
-# res := (messages_count : felt, messages : Message*)
 # The return type of storage variables must be a felts-only type (cannot contain pointers).
 # Just need seperate storage for the len, can use same struct for day or night, use 0 or 1 like true or false
 
@@ -40,11 +40,11 @@ end
 
 
 #
-#Getters: all @view; 
+# Getters: all @view; 
 #
 
 # Reads a message at a specified timestamp.
-@external
+@view
 func read_message_at_timestamp{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}(
     isDay : felt, timestamp : felt
 ) -> (messages_len : felt, messages : Message*):
@@ -64,11 +64,12 @@ func read_message_at_timestamp_helper(
     messages : Message*
 ) -> (messages_len : felt, messages : Message*):
     tempvar time = messages.timestamp
-    if time == timestamp:
+    # if time <= timestamp
+    if assert_le(time, timestamp):
         return (messages_len, messages_len)
     end
-    # TODO add greater than functionality.
-    if messages_len == 0:
+    # if messages_len <= 1 ( - 1)
+    if assert_lt(messages_len, 1):
         return (0, 0)
     end
     return (
