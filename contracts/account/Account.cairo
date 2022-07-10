@@ -71,6 +71,33 @@ func set_public_key{
     return ()
 end
 
+
+#
+# PGP key setting (need to use something smaller than 256 bits so prob better to just symetric key it idk)
+# Whisper functionality 
+#
+
+@view
+func get_whisper_key{
+        syscall_ptr : felt*,
+        pedersen_ptr : HashBuiltin*,
+        range_check_ptr
+    }() -> (res: felt):
+    let (res) = Account.get_whisper_key()
+    return (res=res)
+end
+
+@external
+func set_whisper_key{
+        syscall_ptr : felt*,
+        pedersen_ptr : HashBuiltin*,
+        range_check_ptr
+    }(new_public_key: felt):
+    Account.set_whisper_key(new_public_key)
+    return ()
+end
+
+
 #
 # Business logic
 #
@@ -113,3 +140,4 @@ func __execute__{
     )
     return (response_len=response_len, response=response)
 end
+
